@@ -5,8 +5,10 @@ var host_to_jump = {
 chrome.webRequest.onBeforeRequest.addListener(
 	function(details) {
 		var new_url = "";
+		var current_url = details.url;
 		for (var host in host_to_jump) {
-			new_url = details.url.replace(host, host_to_jump[host]);
+			if(current_url.match(host))
+				new_url = current_url.replace(host, host_to_jump[host]);
 		}
 		return {redirectUrl: new_url}
 	},
