@@ -15,5 +15,5 @@
 		"*://*.imgurp.com/*",
 		"*://*.0wikipedia.org/*",
 		"webRequestBlocking"
-	],
+	]
 }
