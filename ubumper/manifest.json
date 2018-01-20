@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "Url Blocking jUMPER",
+	"description": "Modifies the domain names of urls for the censorred sites in order to enter the related sites",
+	"version": "0.9",
+	"browser_action": {"default_icon": "censorship2_0.jpeg","default_title": "Bumper"},
+	"background": {"scripts": ["ubumper.js"], "persistent": true},
+	"permissions": [
+		"webRequest",
+		"activeTab",
+		"*://imgur.com/*",
+		"*://i.imgur.com/*",
+		"*://*.wikipedia.org/*",
+		"*://imgurp.com/*",
+		"*://*.imgurp.com/*",
+		"*://*.0wikipedia.org/*",
+		"webRequestBlocking"
+	],
+}
